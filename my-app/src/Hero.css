@@ -1,0 +1,248 @@
+/* General Body Styles */
+.body {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 100vh;
+  
+}
+
+.header{
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+  height: 8rem;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: rgb(207, 207, 207);
+}
+
+.footer {
+  width: 100%; /* Ensure full width */
+  background-color: rgb(207, 207, 207); /* Match your design */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1); /* Optional shadow */
+  text-align: center; /* Center text if needed */
+  padding: 1rem; 
+}
+  
+/* Item Container Styles */
+.item-container{
+  justify-content: center;
+  display:  flex;
+  align-items: center;
+  margin: 0;
+  flex-wrap: wrap;
+}
+/* Background for Items */
+.items {
+  margin-top: 20rem;
+  border-radius: 15px;
+  height: 100vh;
+}
+
+.feel {
+  width: 15rem;
+  height: 3rem;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  background: none;
+  border: 3px solid white;
+  transition: width 0.3s, height 0.3s;
+}
+
+.feel:hover {
+  width: 16rem;
+  height: 4rem;
+}
+
+/*//////////    TO-DO CSS   /////////////////////////*/
+.todo{
+  max-width: 60vh;
+  background-image: linear-gradient(rgb(242, 242, 242),rgb(227, 146, 160));
+  background-color: rgb(212, 212, 212);
+  border-radius: 10px;
+  height: 50vh;
+  margin: 80px;
+  overflow-x: auto;
+  overflow-y: auto;
+  box-shadow: 10px 10px 8px #888888;
+}
+
+.tasks{
+  width: auto;
+  font-size: 28px;
+  color: white;
+  margin-top: 2rem;
+  border-radius: 20px;
+  border: 2px solid white;
+  margin-left: -2rem;
+  margin-right: 1rem;
+}
+
+li{
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+.todo-add-btn{               
+  font-family: sans-serif;
+  font-size: 1.3rem; 
+  margin: 5px;
+  margin-left: 11rem;
+  width:30%; 
+  background-color: #a2d2ff;
+  padding:.5rem; 
+  border: 4px solid white;
+  transition: width 0.3s;
+  border-radius:10px; 
+}
+
+.todo-add-btn:hover{
+  width:35%;
+  background-color: orange; 
+}
+
+.todo-done-btn, .todo-delete-btn{
+  background-color:#94a2e5;
+  width:24%;
+  font-family: sans-serif;
+  display: grid;
+  font-size: 1.2rem;
+  margin-left: 20rem;
+  border: 4px solid white;
+  border-radius: 15px;
+  color: white;
+  transition: width 0.3s;
+}
+.todo-done-btn:hover{
+  width:26%;
+  background-color: green;
+}
+
+.todo-delete-btn:hover{
+  width:26%;
+  background-color: maroon;
+}
+.completed {
+  text-decoration: line-through;
+  color: grey; /* Change color to grey for completed tasks */
+}
+
+
+
+/*////////////   THOUGHTS CSS///////////////////////*/
+
+.thought-container{
+    width: 59vh;
+    border-radius: 10px;
+    height: auto;
+    margin: 24px;
+    padding: 5px;
+    box-shadow: 10px 10px 8px #888888;
+    background-image: linear-gradient(#ededed, #9be3fb);
+}
+
+.text-container{
+  color: white;
+  border: 3px solid white;
+  margin: 1rem;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/*///////////////  achievement-container  ////////////////*/
+
+.achievements-container{
+  overflow-y: auto;
+    width: 60vh;
+    border-radius: 10px;
+    height: 50vh;
+    padding: 5px;
+    margin: 80px;
+    box-shadow: 10px 10px 8px #888888;
+    background-image: linear-gradient(#e0dfdf, #94a2e5);
+}
+
+/*////////  checklist    ///////////////////*/
+
+.schedule{
+    overflow-y: auto;
+    width: 60vh;
+    border-radius: 10px;
+    height: 50vh;
+    padding: 5px;
+    margin: 24px;
+    box-shadow: 10px 10px 8px #888888;
+    background-image: linear-gradient(#ededed, #bbfb9b);
+
+}
+
+/*///////////////////////////*/
+
+
+.library-container {
+  background-color: rgb(227, 223, 223);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80rem;
+  height: 30vh; /* Adjusted to auto for better responsiveness */
+  cursor: pointer;
+  margin-left: auto; /* Centering */
+  margin-right: auto; /* Centering */
+  border-radius: 25px;
+  margin-top: 24px;
+  box-shadow: 10px 10px 8px #888888;
+}
+
+.file-container {
+  width: 40rem; 
+  max-height: 15vh; 
+  overflow-y: auto; 
+  margin-top: 6rem;
+  border-radius: 25px;
+  background-color: rgb(198, 198, 198);
+  margin: 6rem;
+  background-repeat: no-repeat;
+  font-size: 1.5rem;
+  padding: 1rem; 
+  transition: width 0.3s, background-color 0.3s; 
+}
+
+.file-container:hover {
+  width: 42rem;
+  background-color: wheat;  
+}
+
+.book-field {
+  display: none; 
+}
+
+.upload-button {
+  border: none;
+  background-color: #94a2e5; /* Matching background color */
+  color: #4518da;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.upload-button:hover {
+    background-color: #7a90d6; /* Darker shade on hover */
+}
+
+.file-item {
+    color: purple;
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between link and button */
+    align-items: center; /* Center vertically */
+    margin-bottom: 10px; /* Space between file items */
+}
+
+
+
