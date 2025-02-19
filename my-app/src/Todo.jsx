@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import './Hero.css';
+import './Items.css';
 import ProgressBar from "@ramonak/react-progress-bar";
 
 export default function Todo() {
