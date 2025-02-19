@@ -31,8 +31,8 @@
 /* Item Container Styles */
 .item-container{
   justify-content: center;
-  display:  flex;
   align-items: center;
+  display: flex;
   margin: 0;
   flex-wrap: wrap;
 }
