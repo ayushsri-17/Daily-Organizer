@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import './Hero.css';
+import './Items.css';
 
 import logo from './assets/download.png'
 
