@@ -3,76 +3,95 @@
 html, body {
   height: 100%;
   margin: 0;
-  display: flex;                             
-  justify-content: center;                   
-  align-items: center;                      
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: white;
   font-family: sans-serif;
   overflow-x: hidden;
+  padding: 1rem;
 }
 
-
-.container{
+.container {
   border-radius: 20px;
-  padding: 20px;  
-  width: 30rem;                 
-  height: 38rem;          
+  padding: 20px;
+  width: 90%;  /* Changed from fixed width to percentage */
+  max-width: 50rem;
+  height: auto; /* Allow height to adjust dynamically */
   display: flex;
-  justify-content: center;       
-  align-items: center;          
+  justify-content: center;
+  align-items: center;
   background-image: url('https://i.pinimg.com/originals/ac/54/a1/ac54a128942c750799c2c1fe144d2467.jpg');
+  background-size: cover;
+  background-position: center;
   transition: width 0.3s, height 0.3s;
-  
 }
 
-h1{
-  color: white;
-}
-
-h2{
+h1, h2 {
   color: white;
   text-align: center;
 }
 
-.icons{
-  width: 10rem;
+.icons {
+  width: 8rem; /* Reduced for smaller screens */
 }
 
-.error{
+.error {
   color: rgb(167, 30, 30);
 }
 
-.form{
+.form {
   border: 2px solid purple;
-  height: 30rem;
-  width: 25rem;
-  padding: 2rem;
+  width: 90%; /* Allow it to adjust */ 
+  min-width: 20px;
+  padding: 1.5rem;
   border-radius: 15px;
+  background: rgba(255, 255, 255, 0.9); /* Slight background for readability */
 }
 
-#Username, #Password, #Email{
-  font-size: 2rem;
-  transition: height 0.3s, width 0.3s;
-  border: 3px solid grey;
-  border-radius: 15px;
+#Username, #Password, #Email {
+  font-size: 1.2rem; /* Reduced for smaller screens */
+  width: 90%; /* Adjust width */
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid grey;
+  border-radius: 10px;
 }
 
-#submit{
- margin-top: 1rem; 
- margin-left: 7rem;
- background-color: purple;
- color: white;
- border: none;
- border-radius: 15px;
- font-size: 1.5rem;
- padding: 0.5rem;
- height: 3rem;
- width: 9rem;
- transition: height 0.3s, width 0.3s;
- cursor: pointer;
+#submit {
+  display: block;
+  margin: 1rem auto 0 auto; /* Center button */
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+  width: 80%;
+  max-width: 9rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
-#submit:hover{
-  height: 3.2rem;
-  width: 10rem;
+#submit:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .form {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  #submit {
+    width: 100%;
+    font-size: 1rem;
+  }
 }

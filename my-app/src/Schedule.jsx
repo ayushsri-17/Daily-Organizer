@@ -54,7 +54,7 @@ export default function Schedule() {
       </div>
 
       {/* Schedule Table */}
-      <center><table border="4rem"style={{marginTop:"2rem", border:"2px solid purple", backgroundColor:"white", width:"30rem", }}>
+      <center><table border="4rem"style={{marginTop:"2rem", border:"2px solid purple", backgroundColor:"white", width:"25rem", }}>
         <thead>
           <tr>
             <th >Event Name</th>

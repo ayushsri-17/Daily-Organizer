@@ -51,6 +51,7 @@ export default function Todo() {
 
   return (
     <>
+     <div className="todo">
       <br />
       <h1 style={{ fontSize: "3rem", textAlign:"center", color:"purple"}}>Your Tasks</h1>
       <ProgressBar completed={calculateProgress()} />
@@ -74,6 +75,7 @@ export default function Todo() {
             ))}
           </div>
         </ul>
+      </div>
       </div>
     </>
   );
