@@ -4,22 +4,18 @@ import { Auth0Provider } from '@auth0/auth0-react';
 import Hero from './LandingPage';
 import Items from './Items';
 import LoginForm from './LoginPage';
-import './Login.css';
+
 
 function App() {
-  return (
-
-    
+  return (  
   
       <Router>
-        <div className='bgimg'>
-          <Routes>
-            <Route path="/" element={<Hero />} />
-            <Route path="/Items" element={<Items />} />
-            <Route path="/LoginPage" element={<LoginForm />}/>
-          </Routes>
-        </div>
-      </Router>
+  <Routes>
+    <Route path="/" element={<Hero />} />
+    <Route path="/Items" element={<Items />} />
+    <Route path="/LoginPage" element={<LoginForm />} />
+  </Routes>
+</Router>
   );
 }
 

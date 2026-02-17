@@ -36,6 +36,7 @@ export default function LoginForm() {
   };
 
   return (
+    <div className="login-page">
     <form className='form' onSubmit={handleSubmit}>
       <h1 style={{color:"purple"}}>Let's Get Started</h1>
 
@@ -75,5 +76,6 @@ export default function LoginForm() {
 
       <button id="submit" type="submit">Get Started</button>
     </form>
+    </div>
   );
 }
