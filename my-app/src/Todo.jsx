@@ -1,19 +1,19 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { getDay, saveDay } from "./api";
 
 export default function Todo({ currentDate }) {
-  const key = `tasks:${currentDate}`;
-
   const [tasks, setTasks] = useState([]);
   const [text, setText] = useState("");
 
   useEffect(() => {
-    const saved = localStorage.getItem(key);
-    setTasks(saved ? JSON.parse(saved) : []);
-  }, [key]);
+    getDay(currentDate).then(data => {
+      setTasks(data.tasks || []);
+    });
+  }, [currentDate]);
 
-  const save = (data) => {
-    setTasks(data);
-    localStorage.setItem(key, JSON.stringify(data));
+  const updateTasks = (newTasks) => {
+    setTasks(newTasks);
+    saveDay(currentDate, { tasks: newTasks });
   };
 
   return (
@@ -22,15 +22,15 @@ export default function Todo({ currentDate }) {
 
       <input
         value={text}
+        onChange={e => setText(e.target.value)}
         placeholder="Add task"
-        onChange={(e) => setText(e.target.value)}
       />
 
       <button
         className="todo-add-btn"
         onClick={() => {
           if (!text) return;
-          save([...tasks, { id: Date.now(), text, done: false }]);
+          updateTasks([...tasks, { text, done: false }]);
           setText("");
         }}
       >
@@ -38,24 +38,28 @@ export default function Todo({ currentDate }) {
       </button>
 
       <ul className="tasks">
-        {tasks.map((t) => (
-          <li key={t.id}>
+        {tasks.map((t, i) => (
+          <li key={i}>
             <span className={t.done ? "completed" : ""}>{t.text}</span>
+
             <button
               className="todo-done-btn"
               onClick={() =>
-                save(
-                  tasks.map((x) =>
-                    x.id === t.id ? { ...x, done: !x.done } : x
+                updateTasks(
+                  tasks.map((x, j) =>
+                    j === i ? { ...x, done: !x.done } : x
                   )
                 )
               }
             >
               ✓
             </button>
+
             <button
               className="todo-delete-btn"
-              onClick={() => save(tasks.filter((x) => x.id !== t.id))}
+              onClick={() =>
+                updateTasks(tasks.filter((_, j) => j !== i))
+              }
             >
               ✕
             </button>
